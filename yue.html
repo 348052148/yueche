@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>06月19日 约车</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<link rel="stylesheet" href="http://wx.jiexingyijia.com//calendar/reset.css" type="text/css" />
+<link rel="stylesheet" href="http://wx.jiexingyijia.com//calendar/page.css?v=1" type="text/css" />
+<script src="http://wx.jiexingyijia.com/js/jquery-1.8.3.min.js"></script>
+<script src="http://wx.jiexingyijia.com/js/knockout-3.3.0.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://wx.jiexingyijia.com/js/sea.js"></script>
+
+ <script>
+            
+seajs.config({
+    base: "/js/pages",
+    map: [
+       [ /^(.*\.(?:css|js))(?:.*)$/i, '$1?v=4' ]
+    ]
+});
+
+ </script>
+
+
+
+<script type="text/javascript">
+    var phoneWidth =  parseInt(window.screen.width);
+    var phoneScale = phoneWidth/640;
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)){
+        var version = parseFloat(RegExp.$1);
+        if(version>2.3){
+            document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+        }else{
+            document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+        }
+    } else {
+        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+</script>
+
+
+
+
+ 
+
+<script type="text/javascript" charset="utf-8">
+
+    wx.config({"debug":false,"beta":true,"appId":"wx2dfe43f5f6749535","nonceStr":"rand_5b25ce25b14ee","timestamp":1529204261,"url":"https:\/\/wx.jiexingyijia.com\/\/subject2\/date\/2018-06-19","signature":"804075d7c96881b8f7fc5e5a878742f176d21479","jsApiList":["chooseImage","previewImage","uploadImage","downloadImage","getLocation","openLocation","scanQRCode","closeWindow"]});
+</script>
+
+    
+
+
+</head>
+<body>
+
+
+
+
+<link rel="stylesheet" href="http://wx.jiexingyijia.com//calendar/calendar.css?t=2" />
+
+
+<style>
+    .chooseOther{
+      background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 9px 9px 9px;
+    overflow: hidden;
+    }
+
+    .chooseOther .form_bd ul li .tit {
+    overflow: hidden;
+    width: 135px;
+}
+
+.chooseOther .form_bd ul li .con input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #444444;
+    width: 100%;
+}
+
+.chooseOther  .form_bd ul li {
+    border-bottom: 1px solid #ddd;
+    height: 65px;
+    line-height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 100%;
+}
+
+h2 {font-size: 7vw; } 
+.chooseTeacher li{display: inline-block;width:42vw;font-size:4vw;height: 10vw;line-height: 10vw;;border:1px solid #ddd;border-redis:0.3em;text-align: center;margin:2vw 0;overflow: hidden}
+.chooseTeacher li input{display: none}
+.chooseTeacher li.selected{color:white;background-color:  #6dcff4}
+.chooseTeacher li.selected a{display: block;width: 100%;height: 100%;color:white}
+.chooseTeacher li.selected a:hover{color:white}
+.chooseTeacher li.selected a:link{color:white}
+.chooseTeacher li.selected a:visited{color:white}
+.chooseTeacher .appointments{text-align: left;line-height: 2em;}
+.chooseTeacher .no_coach{color:#d30000}
+.chooseTeacher .center{text-align: center}
+
+
+
+</style>
+
+<meta http-equiv="cache-control" content="private, max-age=0, no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+
+
+<div id="page">
+<form action='/subject2/order' method="post">
+      <section class="chooseDate" style='position:relative'>
+      
+         <div id="g-calendar" class="g-calendar">
+          <div class="g-calendar-hd">2018-06-19</div>  <!-- 存放 2015年7月 -->
+          
+
+          <!-- 存放周1-周7的表头 -->
+          <div class="g-calendar-tit">
+                                  <span class="day_title">二</span>
+                                  <span class="day_title">三</span>
+                                  <span class="day_title">四</span>
+                                  <span class="day_title">五</span>
+                                  <span class="day_title">六</span>
+                                  <span class="day_title">日</span>
+                                  <span class="day_title">一</span>
+                        </div>  
+
+          <!-- 存放日期 -->
+          <div class="g-calendar-bd">
+                
+                           <a href="http://chat.top.ismbao.com.cn/daily_base_log/yue?url=/subject2/date/2018-06-19">
+                  <span class="day current">19</span>
+                  <span class='available less'>2</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">20</span>
+                  <span class='available'>0</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">21</span>
+                  <span class='available'>0</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">22</span>
+                  <span class='available'>0</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">23</span>
+                  <span class='available'>0</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">24</span>
+                  <span class='available'>0</span>
+                </a>
+                           <a href="javascript:;">
+                  <span class="day disabled">25</span>
+                  <span class='available'>0</span>
+                </a>
+                      </div>
+
+          <span style="position:absolute;left:2vw;top:12vw;font-size:14px;color:#fff;background-color:#6dcff4;line-height:1.2em;padding:2px">星<br>期</span>
+          <span style="position:absolute;left:2vw;top:23vw;font-size:14px;color:#fff;background-color:#6dcff4;line-height:1.2em;padding:2px">日<br>期</span>
+          <span style="position:absolute;left:2vw;top:32vw;font-size:14px;color:#fff;background-color:#6dcff4;line-height:1.2em;padding:2px">剩<br>余</span>
+
+           
+
+        </div>
+
+        
+    
+
+       </section>
+  <section class="chooseItem">
+        
+    <div class="item chooseTeacher">
+
+                    <h2>大坪场地C2-陶伟①</h2>
+            
+                          <p class="no_coach center">来晚一步,所有教练已约满</p>
+             
+                    <h2>大坪场地C2-陶伟②</h2>
+            
+                            <div class="item_hd">08:50-10:10</div>
+                <div class="teachers">
+                  <div class="appointments">
+                                          <ul>
+                                                      <li data-bind="click:choose_coach">
+                              <input type="radio" name="coach_schedule_id_2443" value="340614">
+                              <i>(1</i>/2)
+                              <span>陶伟（正常）</span>(<i>普通</i>)
+                            </li>
+                                                </ul>
+                     
+                                      </div>
+                      
+                </div>
+                            <div class="item_hd">10:10-11:30</div>
+                <div class="teachers">
+                  <div class="appointments">
+                                          <ul>
+                                                      <li data-bind="click:choose_coach">
+                              <input type="radio" name="coach_schedule_id_2444" value="340615">
+                              <i>(1</i>/2)
+                              <span>陶伟（正常）</span>(<i>普通</i>)
+                            </li>
+                                                </ul>
+                     
+                                      </div>
+                      
+                </div>
+             
+                    <h2>大坪逸动C2夜班</h2>
+            
+                          <p class="no_coach center">来晚一步,所有教练已约满</p>
+             
+                
+        
+       
+        
+    </div>
+    
+  </section>
+  <section class="chooseOther">
+    <div class="br5 form_bd">
+        <ul>
+          <li class="fbox">
+            <div class="tit">姓名</div>
+            <div class="flex con">
+                  <input type="text" class="inp" value="周辉">
+                </div>
+          </li>      
+         
+
+          <li class="fbox">
+            <div class="tit">分班</div>
+            <div class="flex con">
+                  <input type="text" class="inp" value="普通">
+                </div>
+          </li>
+          <li class="fbox">
+            <div class="tit">车辆类型</div>
+            <div class="flex con">
+                  <input type="text" class="inp" value="C2自动档">
+                </div>
+          </li>
+           
+          
+        </ul>
+    </div>
+  </section>
+  
+  <section class="chooseOther" style='border:0;background-color:transparent'>
+       <input type="hidden" name="_token" value="i7VXG63tZmgnpHQ9uvUHESg1Bf57AmDNkt0YxTvY">
+       <input  data-bind="{click:submit_order,value:submit_btn_text}" type="button" class="payBtn">
+  </section>
+
+</form>
+<br><br><br>
+</div>
+ 
+ 
+
+<script src="http://wx.jiexingyijia.com/js/jquery.cookie.js"></script>
+
+
+<script>
+
+ 
+ 
+seajs.use(["order-index"],function(Page){
+    var page = Page.init({
+        appointments_per_day : 1
+    });
+});
+ 
+
+
+</script>
+
+
+
+<footer>
+   <ul>
+    <li><a href="/"><i class="icon "></i><br>
+      首页</a></li>
+    <li><a href="http://chat.top.ismbao.com.cn/daily_base_log/yue?url=/subject2/index"><i class="icon  on"></i><br>
+      约科目二</a></li>
+    <li><a href="http://chat.top.ismbao.com.cn/daily_base_log/yue?url=/appointment/list/unfinished"><i class="icon "></i><br>
+      约车记录</a></li>
+    <li><a href="http://chat.top.ismbao.com.cn/daily_base_log/yue?url=/user/info"><i class="icon "></i><br>
+      个人中心</a></li>
+  </ul>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9d4c783e300679efe7917a7bfc816eae";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>

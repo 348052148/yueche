@@ -64,7 +64,11 @@ function curl_get_https($url,$data){
         return $tmpInfo; // 返回数据，json格式
 }
 
-$html = curl_get_https('https://wx.jiexingyijia.com/subject2/date/2018-06-23',[]);//file_get_contents('yue.html');
+$count = 20;
+while($count > 0){
+$count--;
+
+$html = curl_get_https('https://wx.jiexingyijia.com/subject2/date/'.date('Y-m-d',time()+172800),[]);//file_get_contents('yue.html');
 echo 'https://wx.jiexingyijia.com/subject2/date/'.date('Y-m-d',time()+172800).PHP_EOL;
 echo '-----------------------------------START------------------------------------'.PHP_EOL;
 //$html = curl_get_https('https://wx.jiexingyijia.com//subject2/index',[]);
@@ -76,6 +80,12 @@ $html_dom = new \HtmlParser\ParserDom($html);
 $passArray = [];
 
 $item_array = $html_dom->find('.item_hd');
+
+if(empty($item_array)){
+	sleep(1);
+	continue;
+}
+
 foreach($item_array as $index=>$item){
 	if(strtotime(date('Y-m-d').' '.explode('-',$item->plaintext)[0]) > strtotime('10:00')){
 		echo date('Y-m-d').' '.explode('-',$item->plaintext)[0].'------kaiqi'.PHP_EOL;
@@ -110,4 +120,6 @@ foreach ($p_array as $index=>$p){
 	echo '------------------------------------------------------------------------'.PHP_EOL;
 }
 echo '-----------------------------------END------------------------------------'.PHP_EOL;
+break;
+}
 ?>
